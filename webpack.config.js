@@ -43,7 +43,12 @@ module.exports = {
     devServer: {
         contentBase: path.join(__dirname, "dist"),
         compress: false,
+        proxy: {
+            "/api": {
+                target: "http://localhost:3001"
 
+            }
+        },
         hot:true
     },
     devtool: 'inline-source-map',
