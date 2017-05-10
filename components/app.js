@@ -2,19 +2,24 @@ import React from 'react';
 import Header from './header.js';
 import '../public/stylesheets/lessstyle.less';
 import Footer from "./footer";
+import Content from "./content";
  class App extends React.Component {
 
     render() {
         console.log("in app rendeer function");
         return (
             <div>
-                <div id="wrap">
-                    <Header/>
-                    <span className="headerspan">  React ++ Node </span>
+                <div className="wrapper">
+                    <div className="wrapper-inside">
+
+                        <Header/>
+                        <div className="mainapp">
+                            <Content/>
+                        </div>
+
+                    </div>
                 </div>
-                <div>
-                    <Footer/>
-                </div>
+                <Footer/>
 
             </div >
         );

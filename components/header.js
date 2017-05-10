@@ -14,9 +14,8 @@ export default class Header extends React.Component {
     render() {
         console.log("hello from headers");
         return (
-            <div className="center" >
-                <img className="center" src={nodeLogo}/>
-                <img className="center" src={reactLogo}/>
+            <div className="header" >
+                <h2>React-Redux-node app starter</h2>
             </div>
 
         );

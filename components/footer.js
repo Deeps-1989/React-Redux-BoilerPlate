@@ -5,7 +5,7 @@ export default class Footer extends React.Component {
     render() {
         console.log("in Footer");
         return (
-            <div className="footer col-md-4" >
+            <div className="footer" >
                 <span className="footerspan">Created by</span>
             </div>
 
