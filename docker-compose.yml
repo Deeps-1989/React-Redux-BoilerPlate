@@ -1,0 +1,15 @@
+
+  app:
+    build: .
+    ports:
+         - "8080:8080"
+    links:
+      - back:back
+    environment:
+      - URL=http://back:3001
+
+  back:
+    build: ./server
+    ports:
+      - "3001:3001"
+

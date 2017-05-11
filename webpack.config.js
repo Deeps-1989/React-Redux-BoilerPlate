@@ -41,12 +41,13 @@ module.exports = {
 
     },
     devServer: {
+        host:'0.0.0.0',
         contentBase: path.join(__dirname, "dist"),
         compress: false,
         proxy: {
             "/api": {
-                target: "http://localhost:3001"
-
+                "target": process.env.URL? process.env.URL:'http://localhost:3001',
+                "secure": false
             }
         },
         hot:true
@@ -94,3 +95,4 @@ module.exports = {
         // prints more readable module names in the browser console on HMR updates
     ]
 }
+

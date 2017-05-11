@@ -1,0 +1,29 @@
+{
+  "name": "reactredux",
+  "version": "1.0.0",
+  "description": "A sample app in react redux and webpack 2",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "nodemon server.js --ignore components"
+  },
+  "keywords": [
+    "react",
+    "redux",
+    "webpack"
+  ],
+  "author": "Deepak Sharma",
+  "license": "ISC",
+  "dependencies": {
+
+    "body-parser": "^1.17.1",
+
+    "express": "^4.15.2",
+
+    "nodemon": "^1.11.0",
+
+    "uuid": "^3.0.1"
+
+  }
+
+}
