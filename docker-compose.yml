@@ -1,15 +1,27 @@
-
+  db:
+    image: postgres
+    ports:
+      - "5433:5432"
+    environment:
+      - POSTGRES_USER=test
+      - POSTGRES_PASSWORD=test
+      - POSTGRES_DB=testdb
+  back:
+    build: ./server
+    ports:
+      - "3001:3001"
+    links:
+      - db
+    command: bash -c "sleep 10 && npm run knex && npm run serve"
+    environment:
+      - DATABASE_URL=postgres://test:test@db:5432/testdb
   app:
     build: .
     ports:
-         - "8080:8080"
+      - "8080:8080"
     links:
       - back:back
     environment:
       - URL=http://back:3001
 
-  back:
-    build: ./server
-    ports:
-      - "3001:3001"
 

@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "serve": "nodemon server.js --ignore components"
+    "serve": "nodemon server.js --ignore components",
+    "knex":"./node_modules/.bin/knex migrate:latest"
   },
   "keywords": [
     "react",
@@ -15,15 +16,11 @@
   "author": "Deepak Sharma",
   "license": "ISC",
   "dependencies": {
-
     "body-parser": "^1.17.1",
-
     "express": "^4.15.2",
-
+    "knex": "^0.13.0",
     "nodemon": "^1.11.0",
-
+    "pg": "^6.1.5",
     "uuid": "^3.0.1"
-
   }
-
 }
